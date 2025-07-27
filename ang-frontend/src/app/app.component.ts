@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  template: `
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">People Management</a>
-      </div>
-    </nav>
-    <router-outlet></router-outlet>
-  `
+  imports: [RouterOutlet, HeaderComponent, MainContentComponent, FooterComponent],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'People Management';
+  title = 'ang-frontend';
 }
